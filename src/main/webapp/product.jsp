@@ -4,6 +4,7 @@
   Date: 1/16/2025
   Time: 6:39 AM
   To change this template use File | Settings | File Templates.
+
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -31,20 +32,20 @@
 </head>
 <body >
 <form action="productform" method="post">
-<!-- Navigation (same as home page) -->
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-    <!-- ... navigation content ... -->
+
 </nav>
 
-<!-- Products Section -->
+
 <div class="container py-5" >
     <div class="row">
-        <!-- Filters Sidebar -->
+
         <div class="col-lg-3">
             <div class="filters">
                 <h4 class="mb-4">Filters</h4>
 
-                <!-- Category Filter -->
+
                 <div class="mb-4">
                     <h6>Categories</h6>
                     <div class="form-check">
@@ -61,7 +62,7 @@
                     </div>
                 </div>
 
-                <!-- Price Range -->
+
                 <div class="mb-4">
                     <h6>Price Range</h6>
                     <div class="range">
@@ -73,7 +74,7 @@
                     </div>
                 </div>
 
-                <!-- Sort By -->
+
                 <div class="mb-4">
                     <h6>Sort By</h6>
                     <select class="form-select">
@@ -86,7 +87,7 @@
             </div>
         </div>
 
-        <!-- Products Grid -->
+
         <div class="col-lg-9">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2>All Products</h2>
@@ -104,7 +105,6 @@
             </div>
 
             <div class="row g-4">
-                <!-- Product Card -->
                 <div class="col-md-4">
                     <div class="card product-card h-100">
                         <img src="/api/placeholder/300/300" class="card-img-top" alt="Product">
@@ -123,10 +123,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Repeat product cards for grid -->
+
             </div>
 
-            <!-- Pagination -->
+
             <nav class="mt-5">
                 <ul class="pagination justify-content-center">
                     <li class="page-item disabled">
@@ -144,9 +144,9 @@
     </div>
 </div>
 
-<!-- Footer (same as home page) -->
+
 <footer class="bg-dark text-light py-4">
-    <!-- ... footer content ... -->
+
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

@@ -8,7 +8,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <style>
     .hero-section {
-        //background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
 
         background-size: cover;
         background-position: center;
@@ -106,12 +106,64 @@
         padding-top: 20px;
         text-align: center;
     }
-    .her/himbtn{
-        width: 10px;
-        background-color: cadetblue;
-        color: #333333;
-         }
+
+    .hero-section {
+        min-height: 100vh;
+        background: linear-gradient(to bottom, #fff, #e0e0e0);
+    }
+
+    .category-card {
+        position: relative;
+        overflow: hidden;
+        height: 600px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .category-card:hover {
+        transform: scale(1.02);
+    }
+
+    .category-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .category-btn {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(33, 33, 33, 0.9);
+        color: white;
+        border: none;
+        padding: 12px 40px;
+        border-radius: 25px;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .category-btn:hover {
+        background-color: rgba(0, 0, 0, 1);
+    }
+
+    .watch-display {
+        font-family: 'Times New Roman', serif;
+        color: #333;
+    }
+
+    .nav-brand {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+    }
+
 </style>
+
+
+
 </head>
 <body>
 <%--<form action="index" method="post">--%>
@@ -195,7 +247,7 @@
                     <img src="imges/man.png" height="415px" class="card-img-top" alt="Electronics">
                     <div class="card-body text-center">
                         <h5 class="card-title">Mens Watch</h5>
-                        <a href="#" class="btn btn-outline-primary">View Products</a>
+                        <a href="Man.jsp" class="btn btn-outline-primary">View Products</a>
                     </div>
                 </div>
             </div>
@@ -204,7 +256,7 @@
                     <img src="imges/img_8.png" class="card-img-top" alt="Fashion">
                     <div class="card-body text-center">
                         <h5 class="card-title">Women Watches</h5>
-                        <a href="#" class="btn btn-outline-primary">View Products</a>
+                        <a href="Women.jsp" class="btn btn-outline-primary">View Products</a>
                     </div>
                 </div>
             </div>
@@ -213,7 +265,7 @@
                     <img src="imges/img_9.png" class="card-img-top" alt="Home & Living">
                     <div class="card-body text-center">
                         <h5 class="card-title" > Smart Watch</h5>
-                        <a href="#" class="btn btn-outline-primary">View Products</a>
+                        <a href="SmartWatch.jsp" class="btn btn-outline-primary">View Products</a>
                     </div>
                 </div>
             </div>
@@ -225,45 +277,81 @@
 <img src="imges/img_10.png" height="500px" width="900px">  <img src="imges/img_11.png">
 
 <br><br>
-<div style="position: relative">
-    <button style="position: absolute" class="her/himbtn"> For Her</button>
-    <img src="imges/img_12.png" width="700px" height="600px">
-    <button style="position: absolute" class="her/himbtn"> For Him</button>
-    <img src="imges/img_13.png" height="600px" width="700px">
-
-</div>
-
-<!-- Featured Products -->
-<section class="py-5 bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-        <h2 class="text-center mb-4">Featured Products</h2>
-        <div class="row g-4">
-            <div class="col-md-3">
-                <div class="card product-card h-100">
-                    <img src="imges/img_4.png" class="card-img-top" alt="Product">
-                    <div class="card-body">
-                        <h5 class="card-title">Smart Watch</h5>
-                        <p class="card-text text-muted">$199.99</p>
-                        <button class="btn btn-primary w-100">Add to Cart</button>
-                    </div>
+        <a class="nav-brand" href="#">TISSOT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav2">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Collections</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Store</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Service</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="hero-section">
+    <div class="container">
+        <div class="row align-items-center" style="min-height: 100vh;">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="category-card">
+                    <img src="imges/img_25.png" alt="Men's Watch Collection" class="category-img">
+                    <a href="BoyWatches.jsp"><button class="category-btn">FOR HIM</button></a>
+
                 </div>
             </div>
+            <div class="col-md-6">
+                <div class="category-card">
+                    <img src="imges/img_23.png" alt="Women's Watch Collection" class="category-img">
+                    <a href="Girlswatches.jsp">
+                        <button class="category-btn" >FOR HER</button></a>
 
-
-            <!-- More product cards... -->
+                </div>
+            </div>
         </div>
-
-
-
     </div>
-</section>
+</div>
 
+
+
+
+<br><br>
 
 <section>
     <div>
-        <h1>Our Magazine
-            Discover Tissot's latest news and trends</h1>
-        <img src="imges/img_14.png" width="500px " height="500px"><img src="imges/img_15.png" width="500px " height="500px"><img src="imges/img_16.png" width="500px " height="500px">
+
+        <div style="  float: left">
+            <img src="imges/img_16.png" width="800px " height="500px"> <img src="imges/img_21.png" height="500px" >
+            <br>
+            <br>
+
+            1675 – King Charles II of England popularizes waistcoats, leading to pocket watch designs.
+            18th Century – Abraham-Louis Breguet improves accuracy with the tourbillon mechanism.
+            🔹 Famous Historical Pocket Watches:
+
+            Breguet No. 160 – The "Marie Antoinette" watch, one of the most famous and valuable watches ever made.
+            Patek Philippe Henry Graves Supercomplication (1933) – Sold for $24 million at auction!
+
+            Though originally designed for women, wristwatches gained popularity among men during World War I for their practicality.
+
+            1868 – Patek Philippe creates one of the first wristwatches for Countess Koscowicz.
+            1904 – Cartier’s Santos-Dumont becomes the first men's wristwatch.
+            1930s – Rolex popularizes waterproof watches (Rolex Oyster).
+            🔹 Famous Vintage Watches:
+
+            Rolex Submariner (1953) – First professional diving watch.
+            Omega Speedmaster (1969) – Worn on the moon by NASA astronauts.
+        </div>
+
     </div>
     <section class="testimonials py-5 bg-light">
         <div class="container">
@@ -290,7 +378,6 @@
                     </div>
                 </div>
 
-                <!-- Testimonial 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="testimonial-card card h-100 p-4 text-center">
                         <div class="card-body">
@@ -348,10 +435,10 @@
             <div class="col-md-4 mb-4">
                 <h5>Contact Us</h5>
                 <ul class="footer-links">
-                    <li>123 Street Name</li>
-                    <li>City, Country</li>
-                    <li>Phone: (123) 456-7890</li>
-                    <li>Email: info@example.com</li>
+                    <li>Dinithi Lakshani</li>
+
+                    <li>Phone: 077 6789890</li>
+                    <li>Email: dinithi.com</li>
                 </ul>
 
                 <!-- Social Media Icons -->
